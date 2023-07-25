@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int len, i, arr[50], num, j, temp, first, last, middle;
+    int len, i, arr[50], num, first, last, middle;
     cin>>len;
     for(i=0; i<len; i++)
         cin>>arr[i];
