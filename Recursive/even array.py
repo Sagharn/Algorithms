@@ -1,16 +1,11 @@
-def even(arr):
-    if not arr:
+def even(array, index):
+    if index >= len(array):
         return 0
-
-    first_element = arr[0]
-    array = arr[1:]
-    x = even(array)
-
-    return (first_element % 2 == 0) + x
+    temp = 0
+    if array[index] % 2 == 0:
+        temp = 1
+    return temp + even(array, index + 1)
 
 
-input_array = list(map(int, input().split()))
-
-even_count = even(input_array)
-
-print(even_count)
+arr = [6, 9, 8, 4, 1, 12]
+print(even(arr, 0))
