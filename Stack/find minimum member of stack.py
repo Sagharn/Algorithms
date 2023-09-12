@@ -1,3 +1,4 @@
+# time complexity : O(1)
 class StackWithMin:
     def __init__(self):
         self.stack = []
