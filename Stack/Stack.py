@@ -3,24 +3,28 @@ class Stack:
         self.size = size
         self.list = [None] * size
         self.index = 0
-
+        
+# time complexity : O(1)
     def push(self, element):
         if self.index == self.size:
             return 0
         self.list[self.index] = element
         self.index += 1
-
+        
+# time complexity : O(1)
     def pop(self):
         if self.index == 0:
             return 0
         self.index -= 1
-
+        
+# time complexity : O(1)
     def top(self):
         return self.list[self.index - 1]
 
     def get_size(self):
         return self.index
-
+        
+# time complexity : O(n)
     def min(self):
         minimum = self.list[0]
         for i in range(1, self.index):
