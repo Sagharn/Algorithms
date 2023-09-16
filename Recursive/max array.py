@@ -1,14 +1,10 @@
 # time complexity : O(n)
-def find_max(array):
-    if len(array) == 0:
-        return None
-
-    max_val = array[0]
-    for item in array:
-        if item > max_val:
-            max_val = item
-
-    return max_val
+def find_max(arr, index=0, max_value=float('-inf')):
+    if index == len(arr):
+        return max_value
+    if arr[index] > max_value:
+        max_value = arr[index]
+    return find_max(arr, index + 1, max_value)
 
 
 arr = [3, 7, 1, 9, 4, 5]
